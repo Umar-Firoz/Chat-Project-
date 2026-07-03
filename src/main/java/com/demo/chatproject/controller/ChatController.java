@@ -16,7 +16,7 @@ public class ChatController {
         this.chatService = chatService;
     }
 
-    @MessageMapping("/sendMesage")
+    @MessageMapping("/chat")
     @SendTo("/topic/message")
     public ChatResponseDTO chatResponseDTO(ChatRequestDTO chatRequestDTO){
         return chatService.processMessage(chatRequestDTO);
